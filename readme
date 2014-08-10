@@ -1,0 +1,28 @@
+Flow:
+
+Implement Chatroom logic to begin
+
+Side bar use for chat
+mid container used for creating game rooms
+
+click on div to enter game room
+
+show what words are entered by the user,and how many words are entered total
+
+divide the teams and establish order (when we first do this it should be random)
+
+need a scoring and timer object
+
+pass word and timer object and name of active player to all
+
+count down as people try to guess word
+
+pass back remaining time plus whether or not they got the word
+
+remove word from array if guessed correctly
+
+Todo:
+
+Implement chatroom logic
+Create button and form for starting a new game
+create clickable divs
