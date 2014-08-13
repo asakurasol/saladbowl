@@ -1,3 +1,7 @@
+var game = Backbone.Model.extend({
+	idAttribute : "_id",
+})
+
 var Book = Backbone.Model.extend({
 	idAttribute: "_id"
 });
