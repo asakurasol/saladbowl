@@ -1,7 +1,21 @@
-var game = Backbone.Model.extend({
+var count = Backbone.Model.extend({
 	idAttribute : "_id",
 })
 
+var BookView = Backbone.View.extend({
+	tagName: "<p>",
+	className: "book",
+	render: function(){
+		var template = $('#bookTemplate').html();
+		var compiled = Handlebars.compile(template);
+
+		var html = compiled(this.model.attributes);
+		this.$el.html(html);
+		return this;
+	}
+})
+
+/*
 var Book = Backbone.Model.extend({
 	idAttribute: "_id"
 });

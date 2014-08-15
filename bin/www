@@ -9,5 +9,5 @@ var server = app.listen(app.get('port'), function() {
 });
 
 var io =  require('socket.io').listen(server);
-require('../sockets/base')(io);
+require('../server/sockets/base')(io);
 
