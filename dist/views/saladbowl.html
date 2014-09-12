@@ -1,0 +1,42 @@
+<script type="text/ng-template" id="phrase-form.html"><form action="">
+	<input 
+		id="m"
+		autocomplete="off"
+		placeholder="Enter a phrase here"
+	ng-model="p.content">
+	</input>
+
+	<button ng-click="p.submit()">
+		Send
+	</button>
+	</form></script> <script type="text/ng-template" id="word-count.html"><p>There are {{c.count}} words in the pool.</p></script> <script type="text/ng-template" id="team-table.html"><div id="team_container">
+		<table class = "players_table" ng-repeat = "team in t.teams">
+			<tr>
+				<th>{{team.teamId}}</th>
+			</tr>
+
+			<tr ng-repeat = "player in team.players">
+				<td>{{player.username}}</td>
+			</tr>
+		</table>
+	</div></script> <script type="text/ng-template" id="word-div.html"><div ng-show = "w.receivedWord">
+		<div ng-hide = "w.showContent">
+			<button ng-click="w.showWord()">
+				Ready
+			</button>		
+		</div>
+
+		<div ng-show = "w.showContent">
+			<h3>{{w.content}}</h3>
+			<h4>{{w.mySW.data.value}}<h4>
+
+			<form>
+				<button ng-click="w.fail()">
+					failed
+				</button>
+				<button ng-click="w.success()">
+					Got it!
+				</button>
+			</form>
+		</div>
+	</div></script> <h4><span ng-bind="sb.current"></span></h4> <div ng-show="sb.username"> <p>Welcome {{sb.username}}</p> </div> <phrase-form></phrase-form> <word-count></word-count> <word></word> <team-table></team-table> <div id="score_container"> <table class="score_table"> <tr> <th>Team 1 <th>Team 2  <tr> <td>{{sb.team1Score}} <td>{{sb.team2Score}}  </table> </div> <script>//var socket = io();</script>
